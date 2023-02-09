@@ -9,7 +9,6 @@ if [ $c == 5 ]
 then
 echo "Bad luck"
 else [ $c == 9 ]
-then
 echo “good luck”
 elif [ $c == 1 ]
 then
