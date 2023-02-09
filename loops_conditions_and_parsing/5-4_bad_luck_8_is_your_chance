@@ -8,10 +8,10 @@ echo "Best School"
 if [ $c == 3 ]
 then
 echo "bad luck"
-elif [ $c == 4 ]
+elif [ $c == 6 ]
 then
 echo "good luck"
-else [ $c == 1 ]
+else [ $c == 8 ]
 echo "Best school"
 fi
 done
