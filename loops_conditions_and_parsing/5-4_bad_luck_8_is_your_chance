@@ -10,7 +10,7 @@ then
 echo "Bad luck"
 else [ $c == 9 ];
 echo “good luck”
-elif [ $c == 1 ];
+elif [ $c == 1 ]
 echo "Best School"
 fi
 done
