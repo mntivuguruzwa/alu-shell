@@ -5,7 +5,7 @@ while [ $c -le 10 ]
 do
 echo "Best School"
 (( c++ ))
-if [ $c == 9 ]
+if [ $c == 10 ]
 then
 echo "Hi"
 fi
