@@ -9,4 +9,3 @@ if [ $c == 9 ]
 then
 echo "Hi"
 break
-done
