@@ -11,7 +11,7 @@ echo "bad luck"
 elif [ $c == 5 ]
 then
 echo "good luck"
-else [ $c -ge 1 ]
+else [ $c -gt 1 ]
 echo "Best School"
 fi
 done
