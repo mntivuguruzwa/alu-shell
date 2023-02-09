@@ -8,5 +8,9 @@ echo "Best School"
 if [ $c == 5 ]
 then
 echo "bad luck"
+elif [ $c == 9 ]
+then
+	echo "good luck"
+else 
 fi
 done
