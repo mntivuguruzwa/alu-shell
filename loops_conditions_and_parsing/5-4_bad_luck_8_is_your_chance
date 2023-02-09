@@ -5,12 +5,12 @@ while [ $c -le 10 ]
 do
 echo "Best School"
 (( c++ ))
-if [ $c == 5 ]
+if [ $c == 5 ];
 then
 echo "Bad luck"
-else [ $c == 9 ]
+else [ $c == 9 ];
 echo “good luck”
-elif [ $c == 1 ]
+elif [ $c == 1 ];
 echo "Best School"
 fi
 done
