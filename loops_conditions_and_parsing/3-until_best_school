@@ -4,5 +4,5 @@ c=10
 until [ $c -le 1 ]
 do
 echo "Best School"
-(( c--))
+(( c-- ))
 done
