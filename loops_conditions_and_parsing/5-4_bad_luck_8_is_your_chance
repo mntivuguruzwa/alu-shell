@@ -12,5 +12,6 @@ elif [ $c == 5 ]
 then
 echo "good luck"
 else
+then
 fi
 done
