@@ -1,13 +1,58 @@
 #!/usr/bin/env bash
-# This script is displaying
-count=1
-while [ $count -le 20 ]
+
+
+
+
+# Displays the time for 12 horus and 59 minutes.
+
+
+#   Displays hours from 0 to 12
+
+
+#   Displays minutes from 1 to 59
+
+
+
+
+
+
+
+hour=0
+
+
+
+
+
+
+
+while [ $hour -le 12 ]
+
+
 do
- echo "$count"
- case $count in
-   "4") echo "bad luck from China";;
-   "9") echo "bad luck from Japan";;
-   "17") echo "bad luck from Italy";;
- esac
- (( count++ ))
+
+
+ echo "Hour: $hour"
+
+
+ minute=1
+
+
+ while [ $minute -le 59 ]
+
+
+ do
+
+
+   echo "$minute"
+
+
+   (( minute++ ))
+
+
+ done
+
+
+ (( hour++ ))
+
+
 done
