@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-
-
-
-
 # Parses Apache log files in list format.
 
 
