@@ -6,4 +6,5 @@ do
  "lives in $home and rides $shell."
  "$uid's place is protected by the passcode $password,"
  "more info about the user here: $info"
-done < "/etc/passwd"
+"/etc/passwd"
+done
