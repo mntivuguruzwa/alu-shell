@@ -3,21 +3,16 @@
 
 
 
-# Displays the time for 12 horus and 59 minutes.
+# Displays numbers from 1 to 20 in addition to:
 
 
-#   Displays hours from 0 to 12
+#   "bad luck from China" for the 4th iteration
 
 
-#   Displays minutes from 1 to 59
+#   "bad luck from Japan" for the 9th iteration
 
 
-
-
-
-
-
-hour=0
+#   "bad luck from Italy" for the 17th loop iteration
 
 
 
@@ -25,34 +20,39 @@ hour=0
 
 
 
-while [ $hour -le 12 ]
+count=1
+
+
+
+
+
+
+
+while [ $count -le 20 ]
 
 
 do
 
 
- echo "Hour: $hour"
+ echo "$count"
 
 
- minute=1
+ case $count in
 
 
- while [ $minute -le 59 ]
+   "4") echo "bad luck from China";;
 
 
- do
+   "9") echo "bad luck from Japan";;
 
 
-   echo "$minute"
+   "17") echo "bad luck from Italy";;
 
 
-   (( minute++ ))
+ esac
 
 
- done
-
-
- (( hour++ ))
+ (( count++ ))
 
 
 done
