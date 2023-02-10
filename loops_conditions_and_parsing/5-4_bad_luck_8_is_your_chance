@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying bad luck for the 4th loop,good luck for the 8th Best School for the other loops
 c=1
-while [ $c -le 6 ]
+while [ $c -le 4 ]
 do
 echo "Best School"
 (( c++ ))
