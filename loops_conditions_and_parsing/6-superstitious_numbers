@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script is displays 4 and then bad luck from China for the 4th loop,9 and then bad luck from Japan for the 9th loop,17 and then bad luck from Italy
+# This script is displaying
 count=1
 while [ $count -le 20 ]
 do
