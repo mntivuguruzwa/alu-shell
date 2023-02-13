@@ -1,25 +1,38 @@
 #!/usr/bin/env bash
 # Manages 'manage_my_process'
 
-if [ "${1}" == "start" ]
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+if [ "$#" -ne 1 ]
 then
-	./manage_my_process &
-	touch /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
-	echo "manage_my_process started"
-elif [ "${1}" == "stop" ]
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit $?
+fi
+
+if [ "$1" != "start" ] && [ "$1" != "stop" ] && [ "$1" != "restart" ]
 then
-	echo "manage_my_process stopped"
-	kill "$(cat /var/run/my_process.pid)"
-	rm /var/run/my_process.pid
-elif [ "${1}" == "restart" ]
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit $?
+fi
+
+if [ "$1" == "start" ]
 then
-	kill "$(cat /var/run/my_process.pid)"
-	rm /var/run/my_process.pid
-	./manage_my_process &
-	touch /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
-	echo "manage_my_process restarted"
-else
-	echo "Usage: manage_my_process {start|stop|restart}"
+    ./manage_my_process &
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process started"
+
+elif [ "$1" == "stop" ]
+then
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+    echo "manage_my_process stopped"
+
+elif [ "$1" == "restart" ]
+then
+    kill "$(cat /var/run/my_process.pid)"
+    rm /var/run/my_process.pid
+    ./manage_my_process &
+    echo "$!" > /var/run/my_process.pid
+    echo "manage_my_process restarted"
+
 fi
