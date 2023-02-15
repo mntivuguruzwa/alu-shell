@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-# manager for manage_my_process
+# a bash script that manages the manage_my_process script
 
-case $1 in
-    "start")
+case "$1" in
+    start)
 	./manage_my_process &
 	echo "$!" > /var/run/my_process.pid
 	echo "manage_my_process started"
 	;;
-    "stop")
-	pkill -f ./manage_my_process
-        rm /var/run/my_process.pid
+    stop)
+	kill "$(cat /var/run/my_process.pid)"
+	rm /var/run/my_process.pid
 	echo "manage_my_process stopped"
 	;;
-    "restart")
-	pkill -f ./manage_my_process
+    restart)
+	kill "$(cat /var/run/my_process.pid)"
 	rm /var/run/my_process.pid
 	./manage_my_process &
 	echo "$!" > /var/run/my_process.pid
